@@ -173,8 +173,8 @@
   }
 
   .line{
-    font-size: clamp(1.15rem, 2.6vw, 1.5rem);
-    line-height: 1.7;
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
+    line-height: 1.65;
     font-weight: 400;
     color: var(--ink-dim);
     margin: 0 0 13vh;
@@ -199,7 +199,7 @@
   }
 
   .line.pivot{
-    font-size: clamp(1.5rem, 3.6vw, 2.15rem);
+    font-size: clamp(1.6rem, 5vw, 2.15rem);
     font-style: italic;
     font-weight: 500;
     line-height: 1.6;
@@ -237,8 +237,8 @@
   .finale p{
     font-style: italic;
     font-weight: 500;
-    font-size: clamp(1.3rem, 3.4vw, 1.9rem);
-    line-height: 1.65;
+    font-size: clamp(1.45rem, 5.5vw, 1.9rem);
+    line-height: 1.6;
     color: var(--ink-dim);
     opacity: 0.25;
     transform: translateY(8px);
@@ -279,7 +279,7 @@
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--ink-dim) !important;
     text-align: center;
     opacity: 1 !important;
@@ -317,8 +317,18 @@
   }
 
   @media (max-width: 480px){
-    .letter{ padding: 26vh 1.3rem 24vh; }
-    .line{ margin-bottom: 10vh; }
+    .letter{ padding: 22vh 1.3rem 20vh; }
+    .line{ margin-bottom: 9vh; }
+    .title-wrap h1{
+      font-size: clamp(1.4rem, 7.2vw, 2rem);
+      letter-spacing: 0.1em;
+      line-height: 1.35;
+    }
+    .finale{ padding: 5vh 1.3rem 20vh; }
+    .keepsake{ max-width: 84vw; }
+    footer.close{
+      height: calc(14vh + env(safe-area-inset-bottom));
+    }
   }
 
   a, a:visited{ color: var(--gold); }
