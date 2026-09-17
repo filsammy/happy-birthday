@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>The Girl Behind the Curtain</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎭</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,12 @@
     --maroon-dark: #3c1017;
   }
 
-  *{ box-sizing: border-box; }
+  *{ box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html{
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
 
   html, body{
     margin: 0;
@@ -41,12 +46,15 @@
   .curtain-scene{
     position: relative;
     height: 100vh;
+    height: 100svh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     background: radial-gradient(ellipse at center 40%, #14100d 0%, var(--bg-deep) 75%);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   .curtain{
@@ -100,7 +108,7 @@
 
   .scroll-cue{
     position: absolute;
-    bottom: 8vh;
+    bottom: calc(8vh + env(safe-area-inset-bottom));
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
